@@ -1,0 +1,20 @@
+Question 1.
+I am currently preparing a Chainlink Hackathon and wants to provide my product named rentFi. Now I need you to assist me to review the product features.
+Character: 3 character in the system, the landlord, the tenant and the investor.
+Landlord Function:
+a. Initialize a tenancy smart contract with the detail of the property.
+b. If the tenancy smart contract is signed by the tenant, the landlord can do:
+1. withdraw the unpaid rent from the depoist stake in the smart contract
+2. End the rental with the tenant and get part of the guarantee back to makeup the loss due to property demage.
+c. Mint the tenancy smart contract as an NFT and sell it in the marketplace, the person who buy it will get all the rent paid during the lease.
+Tenant Function:
+a. Sign (Sign and pay first month rent and deposit and guarantee) to enter the tenancy smart contract that Initialize by the landlord
+b. Pay the rent through ERC 20 token using smart contract
+Investor Function:
+a. Auction the NFT in the marketplace and get the rent cash flow through smart contract if they owned the NFT
+
+Question 2.
+I have currently finish developing the basic function about renting. Here is the code, you can review my code and tell me where to start first, I am considering the 3 following start point:
+1. Link lending service to the guarantee and deposit in the smart contract and return the profit to the tenant
+2. Build a NFT market place first
+3. Your suggestion
