@@ -22,6 +22,7 @@ contract RentalCashFlowNFT is ERC721 {
         address payable seller;
         uint256 price;
         bool currentlyListed;
+        address rentalAgreementAddress;
     }
     event TokenListedSuccess(
         uint256 indexed tokenId,
@@ -101,7 +102,8 @@ contract RentalCashFlowNFT is ERC721 {
             payable(address(this)),
             payable(msg.sender),
             price,
-            true
+            true,
+            idTorentalAgreements[tokenId].rentalAgreementAddress
         );
 
         _transfer(msg.sender, address(this), tokenId);
@@ -229,5 +231,11 @@ contract RentalCashFlowNFT is ERC721 {
 
     function getCurrentToken() public view returns (uint256) {
         return _tokenIds.current();
+    }
+
+    function getNFTById(
+        uint256 tokenId
+    ) public view returns (RentalAgreementDetails memory) {
+        return idTorentalAgreements[tokenId];
     }
 }
